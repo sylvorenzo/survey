@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Route, Routes} from 'react-router-dom';
+import { Route, Routes} from 'react-router-dom';
 import Questions from './screens/questions';
 import HomeScreen from './screens/home';
 import Statistics from './screens/results';

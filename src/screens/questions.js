@@ -4,7 +4,7 @@ import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import {database} from '../components/fire'
 import { set, ref, push } from '@firebase/database';
-import { Route, Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 function Questions(){
     const navigate = useNavigate();
     //create values to store user input
@@ -100,8 +100,17 @@ function Questions(){
         value:'',
     });
 
-    // create value to navigate to different page
-    const [path, setPath] =useState('/')
+    //create error handling values
+    const [ErrorName, setErrorName] = useState('')
+    const [ErrorSurname, setErrorSurname] = useState('');
+    const [ErrorNumber, setErrorNumber] = useState('');
+    const [ErrorDate, setErrorDate] = useState('');
+    const [ErrorAge, setErrorAge] = useState('');
+    const [ErrorFood, setErrorFood] = useState('');
+    const [ErrorTV, setErrorTV] = useState('');
+    const [ErrorEat, setErrorEat] = useState('');
+    const [ErrorMovies, setErrorMovies] = useState('');
+    const [ErrorRadio, setErrorRadio] = useState('');
 
   //handles the pizza button functionality
   function HandleselectionPizza(){
@@ -206,21 +215,9 @@ function Questions(){
             })
         }
     }
-        //Create regular expressions for validation
+    
        
-        //creates a regular expression where characters cannot be less than 3 and more than 30
-       
-
-        const [ErrorName, setErrorName] = useState('')
-        const [ErrorSurname, setErrorSurname] = useState('');
-        const [ErrorNumber, setErrorNumber] = useState('');
-        const [ErrorDate, setErrorDate] = useState('');
-        const [ErrorAge, setErrorAge] = useState('');
-        const [ErrorFood, setErrorFood] = useState('');
-        const [ErrorTV, setErrorTV] = useState('');
-        const [ErrorEat, setErrorEat] = useState('');
-        const [ErrorMovies, setErrorMovies] = useState('');
-        const [ErrorRadio, setErrorRadio] = useState('')
+        
         function HandleErrors(){
             var Nerror = '';
             var Uerror = '';
