@@ -2,7 +2,8 @@ import React, {useEffect, useState} from 'react';
 import {Chart} from 'react-google-charts';
 import {database} from '../components/fire'
 import { child, get, ref} from '@firebase/database';
-import {useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom';
+
 function Statistics(){
     //value to navigate.
     const navigate = useNavigate();
